@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects_demo</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        // let student = {
+        //     name:'Nitesh',
+        //     class:'v',
+        //     status:"pass",
+        //     totalMarks:100
+        // };
+
+        // let original = 0;
+        // function updateVariable(x){
+        //    x = 10;
+        // }
+
+        // console.log("Original Value : "+ original); output 0
+        // updateVariable(original);
+
+        // console.log("Updated Value : " + original);  output 0
+
+        //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<xxxxx>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+        // let student = {
+        //     name: 'Nitesh',
+        //     class: 'v',
+        //     status: 'Pass',
+        //     totalMarks: 100
+        // };
+
+        // let original = 0;
+        // function updateVariable(x) {
+        //     x.totalMarks = 10
+        // }
+
+        // //callby referance data type
+
+        // console.log("Original Value : " + student.totalMarks); //output 100
+        // updateVariable(student);
+        // console.log("updated value : " + student.totalMarks); //output 10
+
+        //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<xxxxx>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+        //other way to declare function
+        // let student =  {
+        //     name:'Nitesh',
+        //     clas:'v',
+        //     status:'pass',
+        //     totalMarks:100,
+        //     display:function(){
+        //         console.log("Student name " + this.name + " of Class " + this.class + " has marks " + this.totalMarks);
+        //     }
+        // };
+
+        //  let original = 0;
+        // updateVariable = function(x) { //output is same 
+        //     x.totalMarks=10;
+        // }
+
+        // console.log("original value is : " + student.totalMarks);
+        // updateVariable(student);
+        // console.log("after update Value is : " +student.totalMarks);
+
+        // student.display();
+
+        // updateVariable(student);
+
+        //output Student name Nitesh of Class undefined has marks 100
+        // student.display();  //output Student name Nitesh of Class undefined has marks 10
+
+
+        //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<xxxxx>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+        //this keyword use and how to handel it.
+        //student is owner of display function
+
+        //  let student = {
+        //     name:'Nitesh',
+        //     class:'v',
+        //     status:"pass",
+        //     totalMarks:100,
+        //     20:100,               //how to use this type of declaretion
+        //   display: function(){
+        //        console.log(this[20]); // use this format // console.log(student[20]); output will be the same
+        //    } //console.log(student['name']); output is -> Nitesh
+        // };       
+
+        // student.display();  //output 100
+        //student.display  return function defination in terminal
+
+
+        // console terminal use 
+        //student.hasOwnProerty('name') their is a function and output is -> Nitesh
+        //it return true/false  and output 
+        // in terminal we also declare variable
+
+        //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<xxxxx>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+        //constructor
+
+
+        let student = {
+            name: 'Nitesh',
+            class: 'v',
+            status: "pass",
+            totalMarks: 100,
+            20: 100,
+            display: function () {
+                console.log(thi.name);
+            }
+        };
+
+
+        function StudentStructure(name, sclass, status, totalMarks,) {
+            this.name = name;
+            this.sclass = sclass;
+            this.status = status;
+            this[20]=100;
+            this.totalMarks = totalMarks;
+            this.display = function () {
+                console.log(this.name); //output aman
+            }
+        }
+        let student2 = new StudentStructure('Aman', 'Iv', 'Pass', 80); //output in console 
+        let student3 = new StudentStructure('Ankit','BAC','Pass',80);
+
+
+                //custome funtion try self
+               // new String()
+              // new Number()
+             // new Boolean()
+            // new object()
+           // new Array()
+          // new RegExp()
+         // new Function()
+        // New Date()
+
+
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<xxxxx>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+    //Maping methods dsa
+
+
+    let student4 = new Map();
+    student4.set('name','Nitin');
+    student4.set('class','fsd');
+    student4.set('status','Fail');
+
+    document.write(student4.name);
+    console.log(student4);
+    </script>
+</body>
+
+</html>

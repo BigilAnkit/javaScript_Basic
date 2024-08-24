@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using_const_keyword_variable</title>
+</head>
+<body>
+    <h1>JavaScript const</h1>
+    <P id="print1"></P>
+    <P id="print2"></P>
+
+    <script>
+        //here is phones
+
+        const phones = ["Iphone", "Redmi" , "Oppo"];
+
+        //display before
+
+        document.getElementById("print1").innerHTML =phones;
+
+        //Change item
+
+        phones[1] = "Onepuls";
+
+        //insert new itme
+
+        phones.push("Motto");
+        
+        //display new list after inserting 
+
+        document.getElementById("print2").innerHTML = phones;
+        
+
+    </script>
+</body>
+</html>

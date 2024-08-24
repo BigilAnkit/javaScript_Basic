@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function_demo8</title>
+</head>
+<body>
+    <h1 id="demo2"></h1>
+    <script type="text/javascript">
+        //Call by Function
+        // const College = {
+        //     collegeName:'Rk GROUPE OF HIGHER STUDY LEADING COLLEGE',
+        //     city:'IN NEEMUCH(M.P)',
+        //     display:function(){
+        //       document.getElementById("demo2").style.backgroundColor='red';
+        //         let x= document.getElementById("demo2");
+        //         x.innerHTML=this.collegeName+" "+this.city;
+        //     }
+        // }  
+        // document.body.style.backgroundColor='yellow';
+        // let PrintOnScreen= College.display.bind(College);
+        // setTimeout(PrintOnScreen,3000);
+
+        // let animal = {
+        //     name:'Rabbit',
+        //     run: function(speed){
+        //         document.write(this.name + ' runs at '+ speed + ' mph.');
+                
+        //     }
+        // };
+
+        // let bird = {
+        //     name:'Eagle',
+        //     run: function(speed){
+        //         document.write(this.name + ' runs at '+ speed + ' mph.');
+        //     }
+        // };
+
+        // let fn = animal.run.bind(bird,20);
+        // fn();
+        // let cn= animal.run.bind(animal,20);
+        // cn();
+
+        // for(var index =1; index<=3; index++){
+        //     setTimeout(function(){ 
+        //         console.log('after '+ index + 'second(s):' +index);
+        //     },index *1000);
+        // }
+
+        // for(var index =1; index<=3;  index++){
+        //     (function(index){
+        //         setTimeout(function(){
+        //             console.log(' after '+index + ' second(s):' + index);
+        //         },index*1000);
+        //     })(index);
+        // }
+
+        for(let index =1; index<=3; index++){
+            setTimeout(function(){
+                document.writeln(' after'+index + ' second(s): '+ index);
+
+            },index*1000)
+        }
+
+
+    </script>
+</body>
+</html>

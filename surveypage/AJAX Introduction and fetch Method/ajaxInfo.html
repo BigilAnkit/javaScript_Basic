@@ -1,0 +1,18 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script type="text/javascript">
+            function loadXMLDoc(){
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function(){
+                    let xmlDoc=xhttp.responseXML;
+                    console.log(xmlDoc);
+                }
+                xhttp.open("GET","/cd_catalog.xml");
+                xhttp.send();
+            }
+        </script>
+    </body>
+</html>

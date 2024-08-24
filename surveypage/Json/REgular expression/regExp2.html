@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular_Expression2</title>
+</head>
+<body>
+    <script>
+        console.log("This is learnd self regular expression");
+        let reg = /great/g; //This is a regular expression literal in js
+        // reg = /great/i;
+        // console.log(reg);
+        // console.log(reg.source);
+
+        //functions to  match expressions
+
+        let s = "This is  learner great Ankit and great listner";
+        // functions to match exrpression 
+        // 1.exec() - This function will return an array for match or null for no match
+
+
+        // let result = reg.exec(s);
+        // console.log(result);
+        // console.log(result.index);
+        // console.log(result.input);
+        
+        //  result = reg.exec(s);
+        // console.log(result);
+        //  result = reg.exec(s);
+        // console.log(result);
+
+        // result= reg.test(s);
+        // console.log(result);
+        
+        // let result2 = s.match(reg);
+        // console.log(result2);
+
+        let result3 = s.search(reg);
+        console.log(result3);
+
+        let result = s.replace(reg,'HIMAN');
+        console.log(result);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>facn-demo5</title>
+</head>
+<body>
+    <script type="text/javascript">
+    //  function h(){
+    //     var x = 9;
+    //     var y='9';
+    //     if(x===y)
+    //     return true;
+
+    //     else
+    //     return false;
+    //  }
+    //  var a = h();
+    //  console.log(a)
+
+//    let animal = {
+//     name: 'Lion',
+//     color: 'yellow',
+//     size: '3 meter',
+//     total_number: '55'
+//    }
+
+//    console.log(animal.total_number);
+
+//    let bird ={
+//     name:'parrot',
+//     color:'green',
+//     size:'0.12 meter'
+//    }
+
+//    function print(){
+//     console.log(this.name+" "+this.color);
+//     console.log(this.size);
+//    }
+
+//    let print_animal = print.bind(animal);
+//    let print_bird = print.bind(bird);
+
+//    print_animal();
+//    print_bird();
+
+// const employee ={
+//     firstName:"Bruce",
+//     lastName:"Lee",
+//     display:function() {
+//         let x = document.getElementById("demo");
+//         x.innerHTML = this.firstName + " " + this.lastName;
+//     }
+// }
+
+// let display = employee.display.bind(employee);
+// setTimeout(display,3000);
+
+// var lastname = "gupta";
+// var name = "nitesh";
+
+
+// let animal = {
+//     name: 'Lion',
+//     color:'Yellow'
+// }
+
+// let bird = {
+//     name:'parrot',
+//     color:'Green'
+// }
+
+// function print(){
+//     console.log(this.name +" "+ this.lastname);
+// }
+// print();
+
+let animal = {
+    name:'rabbit',
+    run: function(speed){
+        document.write(this.name + ' Runs at '+ speed+ 'mph.');
+
+    }
+};
+
+let bird = {
+    name: 'Eagle',
+    fly: function(speed){
+        document.write(this.name + 'flies at '+ speed + 'mph.');
+
+    }
+};
+
+var fn = animal.run.bind(bird,20);
+fn();
+    </script>
+</body>
+</html>

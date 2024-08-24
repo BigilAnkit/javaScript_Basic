@@ -1,0 +1,50 @@
+<!-- tow way to use Timing Events and Callback -->
+<!-- first way is setTimeout -->
+<!-- second way is timeInterval -->
+
+
+<html>
+    <head>
+        <title></title>
+        <button onclick="document.write('Set timout is started');setTimeout(count,3000)">SetTimeout</button>
+        <button onclick="setTimeout(myFunction,5000)">Try it</button>
+        <button onclick="setTimeout(newMyFunction,3000)">Click Me</button>
+    </head>
+    <body>
+<b><br><br><hr></b>
+
+        <input type="text" name="inputData" id="inputData"/>
+        <button onclick="(displayInput())" > click Here</button>
+
+
+        <!-- How to stop the Execution using clearTimeout() -->
+        
+        <script type="text/javascript">
+        
+        // setTimeout using 
+
+            var counter = 0;
+            function count(){
+                document.writeln(++counter);
+            }
+            function myFunction(){
+                alert('Hello');
+            }
+
+            // using prompt and display input form user 
+            // first creat a veriable and storing data
+            function newMyFunction(){
+              var a=  prompt("Enter your name");
+              document.write(a);
+            }
+
+            // take input from user and showing on display
+
+            function displayInput(){
+              var User_input =  document.getElementById("inputData").value;
+              alert(User_input);
+              document.write(User_input);
+            }
+        </script>
+    </body>
+</html>

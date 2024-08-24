@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onresize="document.body.style.backgroundColor='orange'">
+    <button onclick="document.getElementById('time').innerHTML=Date()">Show time</button>
+    <div id="time"></div>
+
+
+    <!--onfocus="alert('I got in focu')"-->
+    <input type="text" id="keyEvents" />
+    <!--esaly use multipel event in single line code-->
+    <div onmouseover="document.getElementById('clickme').style.backgroundColor='blue'"
+        onmouseout="document.getElementById('clickme').style.backgroundColor='purple'">change color</div>
+    <div id="clickme">change</div>
+
+
+    <div id="uniqe">hellow</div>
+    <div id="demo"></div>
+
+    <script type="text/javascript">
+
+        //mousedown when you click on it
+        var i = 0;
+
+        document.getElementById('uniqe').onmouseover = function () {
+            i++;
+            document.getElementById('demo').innerHTML = "Mouse over is called with i: " + i;
+        }
+        document.getElementById('uniqe').onmouseout = function () {
+            --i;
+            document.getElementById('demo').innerHTML = "Mouse move is called with i: " + i;
+        }
+        document.getElementById('uniqe').onmousedown = function () {
+            alert('Mouse Down is occured');
+        };
+        document.getElementById('uniqe').onmouseup = function () {
+            alert('Mouse up is occured');
+        }
+
+        document.getElementById('keyEvents').onkeydown = function () {
+            document.getElementById('time').innerHTML = "key is Down";
+            document.getElementById('time').style.color = 'red';
+        }
+
+        document.getElementById('keyEvents').onkeyup = function () {
+            document.getElementById('time').innerHTML = "key is up";
+            document.getElementById('time').style.color = 'black';
+        }
+
+        document.getElementById('keyEvents').onkeypress = function () {
+            document.getElementById('time').style.backgroundColor = 'lightblue';
+        }
+
+        document.getElementById('keyEvents').onkeyup = function () {
+            document.getElementById('time').innerHTML = "key is up";
+            document.getElementById('time').style.backgroundColor = 'yellow';
+        }
+
+        document.body.onload = function () {
+            alert("Document is loaded");
+        }
+
+        document.body.onunload = function () {
+            alert("Document is unloaded");
+        }
+    </script>
+</body>
+
+</html>

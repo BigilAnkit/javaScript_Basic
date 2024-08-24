@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>replit</title>
+</head>
+<body>
+    <h2>JavaScript const</h2>
+    <p>Declaring a sonstant array does Not make the elements unchangeable</p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        //create an Array;
+        const fruits = ["Apple", "Banana", "Orange"];
+        
+        //display the Array;
+        document.getElementById("demo").innerHTML = fruits;
+
+        //Change an element:
+        fruits [0] = "Apricot";
+
+       // document.getElementById("demo").innerHTML = fruits;
+
+        //add an element:
+        fruits.push("Mango");
+        
+        //Display the Array:
+        document.getElementById("demo1").innerHTML = fruits;
+    </script>
+</body>
+</html>

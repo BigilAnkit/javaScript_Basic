@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+
+    <script type="text/javascript">
+
+//when a function is passsed as an argument ot another function, it is called a callback.
+//callback functions are used in the case of asynchronous functions, where one function waits for another function.
+
+function myDisplayer(some){
+    document.getElementById("demo").innerHTML = some;
+}
+
+function myCalculator(num1,num2,myCallback){
+    let sum = num1 + num2;
+    myCallback(sum);
+}
+
+myCalculator(5,5,myDisplayer);
+
+////////////////////////////////////////////////////////////////////////////////////
+
+function main(next){
+    console.log("Main is called");
+    next();
+}
+
+
+function next1(){
+    console.log("Next1 is called");
+}
+
+function next2(){
+    console.log("Next2 is called");
+}
+
+main(next1);
+main(next2);
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+// now passing the parameters
+
+function main(next){
+    console.log("Main is called");
+    next(10);
+}
+
+
+function next1(count){
+    console.log("Next1 is called "+count);
+}
+
+function next2(count){
+    console.log("Next2 is called "+count);
+}
+
+main(next1);
+main(next2);
+    </script>
+</body>
+</html>

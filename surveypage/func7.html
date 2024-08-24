@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function_demo7</title>
+</head>
+<div id="demo"></div>
+<body>
+    <script type="text/javascript">
+        
+        // let Car_showrom ={
+        //     TATA:'NEXON',
+        //     color:'black',
+        //     MAHINDRA:'7OO',
+        //     print:function(){
+        //         console.log(this.TATA + " " + this.color);
+        //         console.log(this.MAHINDRA+ " "+ this.color);
+        //     }
+        // }
+
+        // let Print_Car_showrom = Car_showrom.print.bind(Car_showrom);
+        // Print_Car_showrom();
+
+        // const employee = {
+        //     firstName:"Bruce",
+        //     lastName:"Lee",
+        //     display:function(){
+        //         let x = document.getElementById("demo");
+        //         // x.innerHTML = this.firstName + " " + this.lastName;
+        //         document.write(this.firstName + " " + this.lastName);
+        //     }
+        // }
+
+        // setTimeout(employee.display,3000);
+
+        // let Display_employee = employee.display.bind(employee);
+        // Display_employee();
+
+        const employee = {
+            firstName:"Bruce",
+            lastName:"Lee",
+            display:function(){
+                let x = document.getElementById("demo");
+                x.innerHTML = this.firstName + " " + this.lastName;
+                // document.write(this.firstName + " " + this.lastName);
+            }
+        }
+       
+        let Display_employee = employee.display.bind(employee);
+        setTimeout(Display_employee,3000);
+    
+        
+        
+
+    </script>
+</body>
+</html>

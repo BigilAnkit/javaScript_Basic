@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json_dome</title>
+</head>
+
+<body>
+    <h1 id="demo"></h1>
+    <script>
+//*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+        //Json object Array, and jsonobj in json employee
+
+
+        // let jsonObject = {"name": "nitesh","middleName":null,"age":32,"isInCity":true};
+        // // console.log(jsonObject);
+        // let jsonobj = {
+        //     "employee" :{"name":"john","age":30,"city":"New York"},
+        //     "SuperEmployee":{"name":"takr","age":33,"city":"california"}
+        // }
+        // console.log(jsonobj.employee.name);
+        // console.log(jsonobj.SuperEmployee);
+
+//*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+        // const txt = '["ford", "bmw", "Audi", "Fiat"]';
+        // const obj = JSON.parse(txt);
+        // document.getElementById("demo").innerHTML = obj;
+
+        const txt = '{"name":"john","birth":"1986-12-14",age":30,"city":"New York"}';
+        const obj = JSON.parse(txt);
+
+        obj.birth = new Date(obj.birth);
+
+        document.getElementById("demo").innerHTML = `${obj.name, obj.birth}`;
+
+
+        let jsonObject = '{"firstName":"nitesh","lastName":"Gupta","middleName":null,"age":32,"isIncity":true,"subjects":["English","Maths","Computers"],"address":{"city":"ganglore","country":"india"},"dob":"2989-10-29","print": "function(){console.log(this.firstName);}"}'
+
+
+//*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+//JSON.stringify() convert array to string format
+
+// let jsonObject = {
+//             "firstName":"nitesh",
+//             "lastName":"Gupta",
+//             "middleName":null,
+//             "age":32,
+//             "isIncity":true,
+//             "subjects":["English","Maths","Computers"],
+//             "address":{
+//                 "city":"ganglore",
+//                 "country":"india"
+//             },
+//             "dob":"2989-10-29",
+//             "print": function(){
+//                 console.log(this.firstName);
+//             }
+//             };
+
+//             jsonObject.print = jsonObject.print.toString();
+
+        //******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+        //string DATa
+        //in JSON, Javascipt objexts can be stored as text
+
+        // const myobj = {name:"John",age:31,city:"New York"}
+        // const myJOsn = JSON.stringify(myobj);
+        // lacalStorage. setItem("testJOSON",myJOsn);
+
+        //retrieving data:
+
+        // let text = localStorage.getItem("testJSON");
+        // let obj = JSON.parse(text);
+        // document.getElementById("demo").innerHTML = obj.name;
+
+
+        //******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+        // localStorage.setItem("jsonObject",JSON.stringify(jsonObject));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Json_Objects</title>
+    </head>
+    <body>
+        <h1 id="demo"></h1>
+        <h2 id="demo2"></h2>
+        <script>
+            // let jsonObjects2= '{"firstName":"Ankit","lastName":"Gehlot","middleName":null,"age":22,"hairColor":"BrawonBlack","isInCity":true,"subjects":["English","Hidi","Maths","science"], "address": {  "city":"Bangalore",  "contry":"India"},"birth":"2000-06-05","print":"function() {console.log(this.lastName);}"}';
+            // console.log(jsonObjects2);
+            // let arr = JSON.parse(jsonObjects2);
+            // arr.birth = new Date(arr.birth);
+
+            // arr.print = eval("("+arr.print+")");
+
+            // console.log(arr.print())
+
+            // document.getElementById("demo").innerHTML = arr.birth
+
+////stringify to convert ojbect into a string
+
+            let jsonObjects2= {"firstName":"Ankit","lastName":"Gehlot","middleName":null,"age":22,"hairColor":"BrawonBlack","isInCity":true,"subjects":["English","Hidi","Maths","science"], "address": {  "city":"Bangalore",  "contry":"India"},"birth":"2000-06-05","print":function() {console.log(this.lastName);}};
+            console.log(jsonObjects2);
+         
+
+
+            //made json object to take a function as a string format
+
+            const text = '{"name":"john","age":"function(){return 22;}","city":"New York"}';
+            const obj = JSON.parse(text);
+            obj.age = eval("("+obj.age+")");
+            document.getElementById("demo2").innerHTML = obj.name + ","+obj.age();
+
+
+
+
+            // const txt = '{"name":"john","age":30,"city":"New York"}'
+            // const obj = JSON.parse(txt);
+            // document.getElementById("demo").innerHTML = obj.name + ", "+obj.age+ ", "+obj.city;
+
+            // const text = '["ford","BMW","Audi","Fait",49]';
+            // const myArr= JSON.parse(text);
+            // document.getElementById("demo").innerHTML=myArr;
+
+            // const text = '{"name":"John","birth":"1986-12-14","city":"New York"}';
+            // const obj = JSON.parse(text);
+            // obj.birth = new Date(obj.birth);
+            // document.getElementById("demo").innerHTML =obj.birth;
+
+
+        </script>
+    </body>
+</html>

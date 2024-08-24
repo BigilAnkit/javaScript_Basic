@@ -1,0 +1,13 @@
+nav{
+    background-color: rgb(247, 247, 161);
+}
+
+ul >li{
+    display: flex;
+    padding:0px;
+    display: inline;
+    background-color:rgba(255, 255, 255, 0.304);
+    margin-left: 10px;
+
+
+}

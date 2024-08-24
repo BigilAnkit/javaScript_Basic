@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #ans{ 
+            text-align: center;
+            width: 500px;
+            margin-bottom: 10px;
+            border: solid 2px;
+        }
+
+        h1{
+            color:blue;
+        }
+
+        p:hover{
+            color: yellow;
+            background-color: blue;
+        }
+
+    </style>
+    <title>Challenge2_Arithmetic_operator</title>
+</head>
+<body>
+
+    <!--Heading-->
+    <h1 class="box">Arithmetic Operator</h1>
+
+    <!--Challenge 2 find Number of weeks in a year-->
+    <p id="ans">Number of weeks in year</p>
+    
+    <Script>
+
+        //Variable 
+        var a = 365;
+        var b = 7;
+
+        //using / operator to calculate 1
+
+        var calculate1 = Math.floor(a/b)
+        
+        //using % operator to calculate 2
+
+        var calculate2 =a%b;
+        document.write(calculate1 +" "+"<b>Week</b>"+" and "+  calculate2+" Day is there in a year");
+        
+    </Script>
+</body>
+</html>

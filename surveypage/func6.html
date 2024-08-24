@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function_demo6</title>
+</head>
+<h1 class="demo"></h1>
+<body>
+
+    <script type="text/javascript">
+      
+    //   var x = 10;
+
+    //     function abc(){
+    //         y = 20;
+    //         console.log("I am inside abc with x = " + x+ "y =  " +y);
+
+    //         function xyz(){
+    //             let z = 30;
+    //             console.log("I am inside abc with \n x = "+ x + " \n y = " + y +" \n z = "+z);
+    //         }
+    //         xyz();
+    //     }
+    // abc();
+
+
+
+    const employee = {
+        firstName:"bruce",
+        lastName:"Lee",
+        display:function(){
+            var x = document.getElementById("demo").x.innerHTML=this.firstName +" "+this.lastName;
+        }
+    }
+    let display = employee.display.bind(employee);
+    setTimeout(display,3000);
+
+    </script>
+</body>
+</html>
